@@ -1,14 +1,17 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CreateProjectPage from "./pages/CreateProject";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Toaster } from "@/components/ui/toaster"
+import Register from "./pages/Register"
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<CreateProjectPage />} />
+        <Route path="/" element={<Register />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
+      <Toaster />
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
